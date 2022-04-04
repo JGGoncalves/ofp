@@ -15,7 +15,7 @@ echo '#include "pcap.h"' | cpp -H -o /dev/null 2>&1 || \
 echo '#include "numa.h"' | cpp -H -o /dev/null 2>&1 || \
     echo "Warning: NUMA library is not installed. You need to install libnuma-dev"
 
-git -c advice.detachedHead=false clone -q --depth=1 --branch=18.11 http://dpdk.org/git/dpdk-stable dpdk
+git -c advice.detachedHead=false clone -q --depth=1 https://github.com/DPDK/dpdk.git -b v18.11 dpdk
 pushd dpdk
 git log --oneline --decorate
 
